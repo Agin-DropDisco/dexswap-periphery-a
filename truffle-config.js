@@ -37,22 +37,6 @@ module.exports = {
       gas: 9000000,	
       gasPrice: 10000000000 //10 Gwei	
     },	
-    ropsten: {	
-      provider: function () {	
-        return new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/${infuraApiKey}`)	
-      },	
-      network_id: '3',	
-      gas: 8000000,	
-      gasPrice: 10000000000 //10 Gwei	
-    },	
-    kovan: {	
-      provider: function () {	
-        return new HDWalletProvider(mnemonic, `https://kovan.infura.io/v3/${infuraApiKey}`)	
-      },	
-      network_id: '42',	
-      gas: 9000000,	
-      gasPrice: 10000000000 //10 Gwei	
-    },
     // USE YOUR CUSTOM CONFIG HERE. eg"matic" 
   },	
   build: {},	

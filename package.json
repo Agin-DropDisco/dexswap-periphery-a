@@ -1,5 +1,6 @@
 {
   "name": "dexswap-periphery",
+  "author": "Agin DropDisco || gin.dropdisco@gmail.com",
   "version": "0.3.4",
   "description": "Peripheral smart contracts for interacting with DEXswap core contracts",
   "engines": {
@@ -36,6 +37,8 @@
     "typescript": "^3.7.3"
   },
   "scripts": {
+    "compile:master": "truffle compile",
+    "flatt:master": "mkdir contracts/.flattened ./scripts/flattener.sh",
     "lint": "yarn prettier ./test/*.ts --check",
     "lint:fix": "yarn prettier ./test/*.ts --write",
     "clean": "rimraf ./build/",

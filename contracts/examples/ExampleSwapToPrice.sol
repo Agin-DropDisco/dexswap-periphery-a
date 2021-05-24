@@ -1,6 +1,6 @@
 pragma solidity =0.6.6;
 
-import 'dexSwap-core/contracts/interfaces/IDEXswapPair.sol';
+import 'dexswap-core/contracts/interfaces/IDEXswapPair.sol';
 
 import '../libraries/Babylonian.sol';
 import '../libraries/TransferHelper.sol';
