@@ -1,9 +1,9 @@
 const HDWalletProvider = require('truffle-hdwallet-provider')
-const { wrapProvider } = require('arb-ethers-web3-bridge')
 require('dotenv').config();
 
 mnemonic = process.env.KEY_MNEMONIC;
 infuraApiKey = process.env.KEY_INFURA_API_KEY;
+privateKey = process.env.PRIVATE_KEY;
 
 module.exports = {	
   networks: {	
@@ -27,7 +27,7 @@ module.exports = {
       },	
       network_id: '1',	
       gas: 9000000,	
-      gasPrice: 10000000000 //10 Gwei	
+      gasPrice: 10000000000 
     },	
     rinkeby: {	
       provider: function () {	
@@ -35,25 +35,26 @@ module.exports = {
       },	
       network_id: '4',	
       gas: 9000000,	
+      gasPrice: 10000000000 
+    },	
+    moonalpha: {	
+     provider: () => new HDWalletProvider([privateKey], "https://rpc.testnet.moonbeam.network"),
+      network_id: '1287',	
+      gas: 0,	
       gasPrice: 10000000000 //10 Gwei	
     },	
-    ropsten: {	
-      provider: function () {	
-        return new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/${infuraApiKey}`)	
-      },	
-      network_id: '3',	
-      gas: 8000000,	
-      gasPrice: 10000000000 //10 Gwei	
+    oasis: {	
+      provider: () => new HDWalletProvider([privateKey],"https://rpc.oasiseth.org:8545"),
+      network_id: '69',	
+      gas: 9000000,	
+      gasPrice: 1000000000 //1 Gwei	
     },	
-    kovan: {	
-      provider: function () {	
-        return new HDWalletProvider(mnemonic, `https://kovan.infura.io/v3/${infuraApiKey}`)	
-      },	
-      network_id: '42',	
+    matic_tesnet: {	
+      provider: () => new HDWalletProvider([privateKey],"https://rpc-mumbai.matic.today"),
+      network_id: '80001',	
       gas: 9000000,	
       gasPrice: 10000000000 //10 Gwei	
     },
-    // USE YOUR CUSTOM CONFIG HERE. eg"matic" 
   },	
   build: {},	
   compilers: {	

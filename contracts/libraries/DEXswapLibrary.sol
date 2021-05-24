@@ -1,6 +1,6 @@
 pragma solidity >=0.5.0;
 
-import 'dexSwap-core/contracts/interfaces/IDEXswapPair.sol';
+import 'dexswap-core/contracts/interfaces/IDEXswapPair.sol';
 
 import "./SafeMath.sol";
 
