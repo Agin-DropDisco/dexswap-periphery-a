@@ -1,7 +1,8 @@
+// SPDX-License-Identifier: GPL-3.0
 pragma solidity =0.6.6;
 
-import 'dexSwap-core/contracts/interfaces/IDEXswapFactory.sol';
-import 'dexSwap-core/contracts/interfaces/IDEXswapPair.sol';
+import 'dexswap-core/contracts/interfaces/IDEXswapFactory.sol';
+import 'dexswap-core/contracts/interfaces/IDEXswapPair.sol';
 
 import '../libraries/FixedPoint.sol';
 import '../libraries/DEXswapOracleLibrary.sol';
