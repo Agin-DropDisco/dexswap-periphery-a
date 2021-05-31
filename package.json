@@ -15,7 +15,7 @@
     "contracts"
   ],
   "dependencies": {
-    "dexswap-core": "git://github.com/Agin-DropDisco/dexswap-core.git#1.0.0"
+    "dexswap-core": "git://github.com/Agin-DropDisco/dexswap-core.git#1.1.0"
   },
   "devDependencies": {
     "@types/chai": "^4.2.6",
