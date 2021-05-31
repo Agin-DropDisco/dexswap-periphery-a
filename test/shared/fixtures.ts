@@ -4,8 +4,8 @@ import { deployContract } from 'ethereum-waffle'
 
 import { expandTo18Decimals } from './utilities'
 
-import DEXswapFactory from 'dexSwap-core/build/DEXswapFactory.json'
-import IDEXswapPair from 'dexSwap-core/build/IDEXswapPair.json'
+import DEXswapFactory from 'dexswap-core/build/DEXswapFactory.json'
+import IDEXswapPair from 'dexswap-core/build/IDEXswapPair.json'
 
 import ERC20 from '../../build/ERC20.json'
 import WETH9 from '../../build/WETH9.json'
