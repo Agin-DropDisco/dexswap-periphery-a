@@ -1,7 +1,7 @@
 {
   "name": "dexswap-periphery",
   "author": "Agin DropDisco || gin.dropdisco@gmail.com",
-  "version": "0.3.4",
+  "version": "v1",
   "description": "Peripheral smart contracts for interacting with DEXswap core contracts",
   "engines": {
     "node": ">=10"
