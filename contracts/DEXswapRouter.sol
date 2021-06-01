@@ -1,6 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0
 pragma solidity =0.6.6;
 
-import 'dexSwap-core/contracts/interfaces/IDEXswapFactory.sol';
 
 import './libraries/TransferHelper.sol';
 import './interfaces/IDEXswapRouter.sol';
@@ -8,6 +8,7 @@ import './libraries/DEXswapLibrary.sol';
 import './libraries/SafeMath.sol';
 import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
+import './interfaces/IDEXswapFactory.sol';
 
 contract DEXswapRouter is IDEXswapRouter {
     using SafeMath for uint;

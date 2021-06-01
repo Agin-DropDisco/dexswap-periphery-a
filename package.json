@@ -1,5 +1,6 @@
 {
   "name": "dexswap-periphery",
+  "author": "Agin DropDisco || gin.dropdisco@gmail.com",
   "version": "0.3.4",
   "description": "Peripheral smart contracts for interacting with DEXswap core contracts",
   "engines": {
@@ -14,12 +15,11 @@
     "contracts"
   ],
   "dependencies": {
-    "dexswap-core": "git://github.com/Agin-DropDisco/dexswap-core.git"
+    "dexswap-core": "git://github.com/Agin-DropDisco/dexswap-core.git#1.1.0"
   },
   "devDependencies": {
     "@types/chai": "^4.2.6",
     "@types/mocha": "^5.2.7",
-    "arb-ethers-web3-bridge": "^0.7.3",
     "chai": "^4.2.0",
     "dotenv": "^8.2.0",
     "ethereum-waffle": "^2.4.1",
@@ -32,10 +32,13 @@
     "solc": "0.6.6",
     "truffle-flattener": "^1.4.4",
     "truffle-hdwallet-provider": "^1.0.17",
-    "ts-node": "^8.5.4",
+    "ts-node": "^8.5.4",    "truffle-assertions": "^0.9.2",
+    "truffle-plugin-verify": "^0.5.8",
     "typescript": "^3.7.3"
   },
   "scripts": {
+    "compile:master": "truffle compile",
+    "flatt:master": "mkdir contracts/.flattened ./scripts/flattener.sh",
     "lint": "yarn prettier ./test/*.ts --check",
     "lint:fix": "yarn prettier ./test/*.ts --write",
     "clean": "rimraf ./build/",

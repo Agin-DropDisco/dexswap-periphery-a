@@ -1,9 +1,9 @@
-const HDWalletProvider = require('truffle-hdwallet-provider')
-const { wrapProvider } = require('arb-ethers-web3-bridge')
+const HDWalletProvider = require('truffle-hdwallet-provider')	
 require('dotenv').config();
 
 mnemonic = process.env.KEY_MNEMONIC;
 infuraApiKey = process.env.KEY_INFURA_API_KEY;
+privateKey = process.env.PRIVATE_KEY;
 
 module.exports = {	
   networks: {	
@@ -37,33 +37,35 @@ module.exports = {
       gas: 9000000,	
       gasPrice: 10000000000 //10 Gwei	
     },	
-    ropsten: {	
-      provider: function () {	
-        return new HDWalletProvider(mnemonic, `https://ropsten.infura.io/v3/${infuraApiKey}`)	
-      },	
-      network_id: '3',	
-      gas: 8000000,	
+    moonalpha: {	
+      provider: () => new HDWalletProvider([privateKey], "https://rpc.testnet.moonbeam.network"),
+      network_id: '1287',	
+      gas: 0,	
       gasPrice: 10000000000 //10 Gwei	
     },	
-    kovan: {	
-      provider: function () {	
-        return new HDWalletProvider(mnemonic, `https://kovan.infura.io/v3/${infuraApiKey}`)	
-      },	
-      network_id: '42',	
+    oasis: {	
+      provider: () => new HDWalletProvider([privateKey], "https://rpc.oasiseth.org:8545"),
+      network_id: '69',	
+      gas: 9000000,	
+      gasPrice: 1000000000 //1 Gwei	
+    },	
+    matic: {	
+      provider: () => new HDWalletProvider([privateKey], "https://rpc-mumbai.matic.today"),
+      network_id: '80001',	
       gas: 9000000,	
       gasPrice: 10000000000 //10 Gwei	
     },
-    // USE YOUR CUSTOM CONFIG HERE. eg"matic" 
   },	
   build: {},	
   compilers: {	
     solc: {	
-      version: '0.6.6',
+      version: '0.5.16',
       settings: {
         evmVersion: 'istanbul',
-      }
+      },
     }
   },	
+  
   solc: {	
     optimizer: {	
       enabled: true,	
